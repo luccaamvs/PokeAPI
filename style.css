@@ -1,0 +1,175 @@
+body {
+	background: linear-gradient(to right, rgb(0, 211, 193), rgb(108, 219, 98));
+	color: white;
+	margin: 0;
+	font-family: Roboto;
+}
+
+.container {
+	padding: 40px;
+	margin: 0 auto;
+}
+
+h1 {
+	text-align: center;
+	font-size: 54px;
+}
+
+.pokedex {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	grid-gap: 20px;
+	padding-inline-start: 0;
+}
+
+.card {
+	list-style: none;
+	padding: 40px;
+	color: #222;
+	text-align: center;
+	border-radius: 20px;
+	position: relative;
+}
+
+.card::after {
+	content: "";
+  display: block;
+  width: 50%;
+  height: 45%;
+  border-radius: 100%;
+  background-color: #fff;
+  opacity: .7;
+  position: absolute;
+  top: 15%;
+  left: 25%;
+}
+
+.steel {
+	background-color: #838383;
+}
+
+.fire {
+	background: radial-gradient(
+		#da3535,#f58403
+	) 
+}
+
+.grass {
+	background: radial-gradient(
+		#64da35,#03f5b9
+	) 
+}
+
+.electric {
+	background: radial-gradient(
+		#fff9ac,#c9f503
+		)
+}
+
+.water, .ice {
+	background: radial-gradient(
+		#00d9ff,#284fff
+		)
+}
+
+.ground {
+	background: radial-gradient(
+		#e28e1f,#5f3607
+		)
+}
+
+.rock {
+	background: radial-gradient(
+		#5f3607,#ffd49c
+		)
+}
+
+.fairy {
+	background-color: #fceaff;
+}
+
+.poison {
+	background: radial-gradient(
+		#c300ff,#284fff
+		)
+}
+
+.bug {
+	background: radial-gradient(
+		#00ff2a,#7a2a69
+		)
+}
+
+.dragon {
+	background: radial-gradient(
+		#7285a3,#0a4553
+		)
+}
+
+.psychic {
+	background: radial-gradient(
+		#9972a3,#ffffff
+		)
+}
+
+.flying {
+	background: radial-gradient(
+		#398b96,#FFFFFF
+		)
+}
+
+.fighting {
+	background: radial-gradient(
+		#575757,#f5ad97
+		)
+}
+
+.normal {
+	background: radial-gradient(
+		#ffffff,#999999
+		)
+}
+
+.card:hover {
+	animation: bounce 0.5s linear;
+}
+
+.card-title {
+	text-transform: capitalize;
+	margin-bottom: 0px;
+	font-size: 32px;
+	font-weight: normal;
+	position: relative;
+	z-index: 2;
+}
+
+.card-subtitle {
+	text-transform: capitalize;
+	margin-top: 5px;
+	color: rgb(0, 0, 0);
+	font-weight: lighter;
+	position: relative;
+	z-index: 2;
+}
+
+.card-image {
+	height: 180px;
+	position: relative;
+	z-index: 2;
+}
+
+@keyframes bounce {
+	20% {
+			transform: translateY(-6px);
+	}
+	40% {
+			transform: translateY(0px);
+	}
+
+	80% {
+			transform: translateY(-2px);
+	}
+	100% {
+			transform: translateY(0);
+	}
+}
